@@ -41,7 +41,9 @@ Generator <function> : Random.Generator Int
 
     NewFaces newFaces ->   
       (Model (fst newFaces) (snd newFaces), Cmd.none)
-    
+
+-- can also use  ((uncurry Model) newFaces, Cmd.none)    
+-- http://package.elm-lang.org/packages/elm-lang/core/4.0.5/Basics#uncurry
 
 -- SUBSCRIPTIONS
 subscriptions : Model -> Sub Msg
